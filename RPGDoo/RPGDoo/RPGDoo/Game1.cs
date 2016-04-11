@@ -19,6 +19,7 @@ namespace RPGDoo
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        GameStateManager stateManager;
 
         public Game1()
         {
@@ -26,6 +27,9 @@ namespace RPGDoo
             Content.RootDirectory = "Content";
 
             Components.Add(new InputHandler(this));
+
+            stateManager = new GameStateManager(this);
+            Components.Add(stateManager);
         }
 
         /// <summary>
