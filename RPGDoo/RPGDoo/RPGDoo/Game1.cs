@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using XRpgLibrary;
 
 namespace RPGDoo
 {
@@ -23,6 +24,8 @@ namespace RPGDoo
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            Components.Add(new InputHandler(this));
         }
 
         /// <summary>
