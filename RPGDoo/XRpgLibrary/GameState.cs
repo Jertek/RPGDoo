@@ -82,7 +82,7 @@ namespace XRpgLibrary
         internal protected virtual void StateChange(object sender, EventArgs e)
         {
             if (StateManager.CurrentState == Tag)
-                show();
+                Show();
             else
                 Hide();
         }
@@ -99,7 +99,7 @@ namespace XRpgLibrary
             }
         }
 
-        protected virtual void hide()
+        protected virtual void Hide()
         {
             Visible = false;
             Enabled = false;
